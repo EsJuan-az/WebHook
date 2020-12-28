@@ -1,0 +1,15 @@
+{%extends './layout.html'%}
+{%load static%}
+{%block nameSection%}Categories{%endblock%}
+{%block content%}
+
+    <h1>Categories</h1>
+
+    {%for categorie in categories%}
+    <a href={%url 'getHooked' categorie=categorie.name%} class="categorie">
+        <img src="{{categorie.icon.url}}"/>
+        <hr class="separadorCat"/>
+        <h3>{{categorie.name}}</h3>
+    </a>
+    {%endfor%}
+{%endblock%}

@@ -1,0 +1,37 @@
+{%extends './layout.html'%}
+
+{%block nameSection%}Home{%endblock%}
+
+{%block content%}
+    <h1>Home</h1>
+    <hr/>
+    <div class="ctn-info">
+        <h2>What is WebHook?</h2>
+        <p>
+        WebHook is a page that let you know and see different kind of sites on the web, 
+        it is a tool that is able to recieve recomendations of pages from its users and suggest them to other users
+        </p>
+
+        <h2>How to use WebHook?</h2>
+        <p>
+        Just pick an option, <strong>Get Hooked</strong> for going randomly or  
+        <strong>Categories</strong> for choosing the categorie of the sites that you want to visit
+        </p>
+
+        <h2>What do I have to do?</h2>
+        <p>
+            All you have to do in this case is allow us to open tabs in your browser, for this you can
+            push this button, it will open a blank tab and you have to set the permissions active
+            <a class="boton start abrirpage">Open Tab</a>
+        </p>
+
+        <h2>Now choose:</h2>
+    </div>
+    <section class="ctn-izquierda sections">
+    <a href="{%url 'getHooked'%}" class="boton start"> Get Hooked </a>
+    </section>
+    <section class="ctn-derecha sections" >
+    <a href="{%url 'categories'%}" class="boton categories"> Categories </a>
+    </section>
+    
+{%endblock%}

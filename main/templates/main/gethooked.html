@@ -1,0 +1,32 @@
+{%extends './layout.html'%}
+{%load static%}
+{%block nameSection%}
+    {%if categorie%}
+        Get Hooked
+    {% else %}
+        404
+    {%endif%}
+{%endblock%}
+{%block content%}
+    {%if categorie%}
+        <script>
+            var pages = []
+            {%for page in pages%}
+            pages.push({name:'{{page.name}}',url:'{{page.url}}'})
+            {%endfor%}
+        </script>
+        <h1>Getting Hooked | {{categorie.name}}</h1>
+        <a class="boton gethooked">Go!<a>
+        <h1 class="ctn-display"></h1>
+        <div class="ctn-gethookedRandom">
+            <img src="{{categorie.icon.url}}"/>
+        </div>
+    {% else %}
+        <h1>404 || Categorie not found<h1>
+    {%endif%}
+
+{%endblock%}
+
+{%block icons%}
+    <a href="{%url 'categories'%}"><img src="{%static 'img/lista.png'%}" class="irACat"/></a>
+{%endblock%}

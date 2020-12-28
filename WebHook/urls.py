@@ -15,7 +15,15 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from main.views import *
+from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',homePage,name="home"),
+    path('getHooked/',getHooked,name="getHooked"),
+    path('getHooked/<str:categorie>/',getHooked,name="getHooked"),
+    path('categories/',categories,name="categories")
 ]
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
