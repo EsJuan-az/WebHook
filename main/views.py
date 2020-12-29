@@ -19,7 +19,7 @@ def getHooked(request,categorie="Randomly"):
         except:
             categorie,pages = False,False
 
-    return render(request,'main/getHooked.html',{
+    return render(request,'main/gethooked.html',{
         'inGetHooked':True,
         'categorie':categorie,
         'pages':pages
