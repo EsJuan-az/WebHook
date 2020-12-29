@@ -1,5 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
+from .forms import *
 from main.models import *
+import random
 # Create your views here.
 def homePage(request):
     return render(request,'main/homepage.html',{
@@ -23,8 +25,28 @@ def getHooked(request,categorie="Randomly"):
     })
 
 def categories(request):
-    categories = Categorie.objects.all()
+    categories = list(Categorie.objects.all())
+    random.shuffle(categories,random.random)
     return render(request,'main/categories.html',{
         'categories':categories,
         'inCategories':True
+    })
+
+def submitHooks(request):
+    formulario = PageForm()
+    if request.method == 'POST':
+        formulario = PageForm(request.POST)
+        if formulario.is_valid():
+            dataform = formulario.cleaned_data
+            print(dataform)
+            page = Pages(
+                name=dataform['name'],
+                url=dataform['url'],
+                categories = dataform['categorie']
+            )
+            page.save()
+            return redirect('home')
+    return render(request,'main/submitHooks.html',{
+        'inHooks':True,
+        'form':formulario,
     })

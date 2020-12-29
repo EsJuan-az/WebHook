@@ -1,0 +1,30 @@
+label{
+    font-family: 'Karla', sans-serif;
+    font-size: 30px;
+    color:white;
+}
+p:hover{
+    text-shadow: 0px 0px 5px white;
+}
+.ctn-form-page{
+    width: 75%;
+    margin: 0px auto;
+}
+textarea,input,select{
+    height: 25px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    border-radius: 12px;
+    display: inline-block;
+    padding: 1px;
+    width: 250px;
+    font-family:'Karla', sans-serif; 
+}
+.errorlist li{
+    color: tomato;
+    font-family: 'Karla', sans-serif;
+    list-style: none;
+}
+.errorlist ul{
+    list-style: none;
+}

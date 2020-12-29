@@ -1,5 +1,5 @@
 {%extends './layout.html'%}
-
+{%load static%}
 {%block nameSection%}Home{%endblock%}
 
 {%block content%}
@@ -25,6 +25,13 @@
             <a class="boton start abrirpage">Open Tab</a>
         </p>
 
+        <h2>Can I do something to help?</h2>
+        <p>
+            Sure, just go to the sidebar in the <img src="{% static 'img/bombillaon.png' %}" class="icon"/>
+             icon and press in submit page, there you will be able to put any webpage in our database
+             , it doesn't matter if you think that your page is already on the base, you can put it
+        </p>
+        
         <h2>Now choose:</h2>
     </div>
     <section class="ctn-izquierda sections">

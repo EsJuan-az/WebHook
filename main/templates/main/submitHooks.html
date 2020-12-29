@@ -1,0 +1,15 @@
+{%extends './layout.html'%}
+{%load static%}
+{%block nameSection%}Submit Hooks{%endblock%}
+{%block content%}
+    <h1>Here you can submit websites to show</h1>
+    <div class="ctn-form-page">
+        <form action="" method="POST">
+            {% csrf_token %}
+            {{form.as_p}}
+
+            <a class="boton start submitHook">Send Hook</a>
+            <a href="{%url 'home'%}" class="boton categories">Go back</a>
+        </form>
+    </div>
+{%endblock%}

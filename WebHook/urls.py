@@ -17,13 +17,15 @@ from django.contrib import admin
 from django.urls import path
 from main.views import *
 from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',homePage,name="home"),
     path('getHooked/',getHooked,name="getHooked"),
     path('getHooked/<str:categorie>/',getHooked,name="getHooked"),
-    path('categories/',categories,name="categories")
-]
+    path('categories/',categories,name="categories"),
+    path('hooks/',submitHooks,name="submithooks")
+] + static(settings.STATIC_URL,document_root = settings.STATIC_ROOT)
 if settings.DEBUG:
-    from django.conf.urls.static import static
     urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
