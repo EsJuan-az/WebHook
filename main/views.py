@@ -18,6 +18,7 @@ def getHooked(request,categorie="Randomly"):
             pages = Pages.objects.filter(categories_id = categorie.id)
         except:
             categorie,pages = False,False
+
     return render(request,'main/getHooked.html',{
         'inGetHooked':True,
         'categorie':categorie,
