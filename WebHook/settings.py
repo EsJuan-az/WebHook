@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+t8r$(bk!i34pp((l9n5t$*dygq_+r*ko-5ghb$1hd7)gy3rm4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
-
+#DEBUG = False
+DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
 
 ALLOWED_HOSTS = ['*']
 
@@ -141,7 +141,7 @@ STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR,'static'),
-    os.path.join(BASE_DIR,'media'),
+    os.path.join(BASE_DIR,'media/categories-icons'),
 )
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,"media")
