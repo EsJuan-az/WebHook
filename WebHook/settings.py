@@ -23,8 +23,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '+t8r$(bk!i34pp((l9n5t$*dygq_+r*ko-5ghb$1hd7)gy3rm4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-#DEBUG = False
-DEBUG = bool( os.environ.get('DJANGO_DEBUG', True) )
+DEBUG = False
+
 
 ALLOWED_HOSTS = ['*']
 
@@ -77,22 +77,22 @@ WSGI_APPLICATION = 'WebHook.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.0/ref/settings/#databases
 
-"""
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
-"""
 
 import dj_database_url
 from decouple import config 
-DATABASES = {
-    'default':dj_database_url.config(
-        default = config('DATABASE_URL')
-    )
-}
+if not DEBUG:
+    DATABASES = {
+        'default':dj_database_url.config(
+            default = config('DATABASE_URL')
+        )
+    }
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
