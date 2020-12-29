@@ -1,0 +1,43 @@
+
+@keyframes arcoirisbackground{
+    0%{
+        background: tomato;
+    }
+    14.2%{
+        background: orangered;
+    }
+    28.4%{
+        background: goldenrod;
+    }
+    42.8%{
+        background: springgreen;
+    }
+    57.1%{
+        background: deepskyblue;
+    }
+    71%{
+        background: indigo;
+    }
+
+}
+
+.ctn-gethookedRandom{
+    margin-top: 20px;
+    width: 90%;
+    border-radius: 12px;
+    background-size: 100% 100%;
+    background:tomato;
+    margin: 0px auto;
+    height: 300px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    animation: arcoirisbackground linear 10s infinite;
+    box-shadow: 1px 1px 10px #ccc;
+}
+.ctn-gethookedRandom img{
+    display: block;
+    margin: 0px auto;
+    width: 300px;
+    height: 300px;
+    line-height: 500px;
+}
