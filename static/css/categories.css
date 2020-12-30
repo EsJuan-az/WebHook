@@ -23,7 +23,6 @@
     transition: all 0.1s;
 }
 .categorie:active{
-    margin-bottom: 9px;
     text-shadow: 0px 0px 5px white;
     transform: translateY(4px);
     transition: text-shadow 0.1s, transform 0.1s;
