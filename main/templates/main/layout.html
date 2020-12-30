@@ -31,6 +31,11 @@
     <link href = "{%static 'css/subHooks.css' %}" type = "text/css" rel = "stylesheet"/>
     <script src="{%static 'javascript/subHooks.js'%}" type="text/javascript"></script>
     {%endif%}
+
+    {%if inContact%}
+    <link href = "{%static 'css/contact.css' %}" type = "text/css" rel = "stylesheet"/>
+    <script src="{%static 'javascript/contact.js'%}" type="text/javascript"></script>
+    {%endif%}
 </head>
 <body>
     <div class="activar-nav">
@@ -43,7 +48,7 @@
         <h1>WebHook <span>hub<span></h1>
         <ul>
         <li><a href="{%url 'home'%}"><img src="{%static 'img/home.png'%}"/>Home</a></li>
-        <li><a href="#"><img src="{%static 'img/dialog.png'%}"/>Contact</a></li>
+        <li><a href="{%url 'contact'%}"><img src="{%static 'img/dialog.png'%}"/>Contact</a></li>
         <li><a href="{%url 'submithooks'%}"><img src="{%static 'img/subir-archivo.png'%}"/>Submit page</a></li>
         <!--
             <li><a href="#"></a></li>

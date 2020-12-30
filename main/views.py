@@ -51,3 +51,8 @@ def submitHooks(request):
         'inHooks':True,
         'form':formulario,
     })
+
+def contact(request):
+    return render(request,'main/contact.html',{
+        'inContact':True
+    })

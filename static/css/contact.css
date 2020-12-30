@@ -1,0 +1,64 @@
+.ctn-contact{
+    margin: 0px auto;
+    width: 50%;
+    height: 160.5px;
+}
+.ctn-contact a{
+    display: block;
+    float: left;
+    margin: 0px auto;
+    margin-left: 29.5px;
+    margin-right: 29.5px;
+}
+.ctn-contact a:hover{
+    transform: translateY(-4px);
+    transition: all 0.1s
+}
+.ctn-contact a:active{
+    transform: translateY(6px);
+    transition: all 0.1s
+}
+.ctn-contact a img{
+    width: 160px;
+    height: 160px;
+}
+.clearfix{
+    clear: both;
+}
+.ack a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    font-family: 'Karla', sans-serif;
+    color:#00ffb0;
+    font-size: 35px;
+}
+.ack li:hover{
+    transform: translateY(-4px);
+    transition: transform 0.5px;
+}
+.ack a:hover{
+    text-shadow: 0px 0px 10px #00ffb0;
+    transition: all 0.5px;
+}
+.ack{
+    display: block;
+    width: 30%;
+    list-style: none;
+    margin: 0px auto;
+}
+.logoflati{
+    margin: 0px;
+    display: block;
+    margin: 0px auto;
+}
+.logoflati:hover{
+    transform: translateY(-4px);
+    transition: transform 0.5px;
+}
+.logoflati img{
+    display: inline;
+    width: 150px;
+    height: 50px;
+}

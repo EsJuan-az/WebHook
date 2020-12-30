@@ -25,7 +25,8 @@ urlpatterns = [
     path('getHooked/',getHooked,name="getHooked"),
     path('getHooked/<str:categorie>/',getHooked,name="getHooked"),
     path('categories/',categories,name="categories"),
-    path('hooks/',submitHooks,name="submithooks")
+    path('hooks/',submitHooks,name="submithooks"),
+    path('contact/',contact,name="contact")
 ] 
 
 urlpatterns += static(settings.MEDIA_URL,document_root = settings.MEDIA_ROOT)
