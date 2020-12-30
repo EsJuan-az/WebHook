@@ -8,7 +8,7 @@ $(document).ready(() => {
                                      .css("transition","all 5s")
         setTimeout(() => {
            $(".ctn-gethookedRandom img").css("transform","none") 
-           let page = pages.pop(getRandomInt(0,pages.length))
+            let page = pages.splice(getRandomInt(0,pages.length),1)[0]
            try{
                 $(".ctn-display").text("The name of this page is " + page.name + "... Enjoy!")
                 $(".ctn-display").fadeIn()
